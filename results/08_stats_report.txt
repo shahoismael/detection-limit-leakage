@@ -1,0 +1,136 @@
+08_stats report
+
+input             29,040 folds, 44 elements
+bootstrap         10,000 draws, percentile intervals over ELEMENTS
+median scored rows per element  1,643
+
+R2 BY ARM AND PROTOCOL, median over elements with a 95% interval
+        regime representation             model                 blocked                    loso                  random
+  common_floor            ilr             ridge +0.793 [+0.668, +0.851] +0.535 [+0.225, +0.635] +0.806 [+0.683, +0.875]
+  common_floor            ilr    xgb_regression +0.833 [+0.691, +0.889] +0.424 [+0.200, +0.580] +0.859 [+0.743, +0.909]
+  common_floor           none  coordinates_only +0.220 [+0.125, +0.305] -1.425 [-2.472, -1.036] +0.470 [+0.381, +0.516]
+  common_floor           none mask_density_only -0.016 [-0.082, +0.012] -0.832 [-1.466, -0.528] +0.016 [-0.002, +0.058]
+  common_floor           none       survey_mean +0.091 [-0.014, +0.154] -0.728 [-1.225, -0.366] +0.085 [+0.016, +0.161]
+  mask_feature            ilr             ridge +0.768 [+0.660, +0.856] -0.046 [-0.403, +0.085] +0.796 [+0.682, +0.867]
+  mask_feature            ilr    xgb_regression +0.838 [+0.699, +0.884] +0.157 [-0.173, +0.420] +0.859 [+0.750, +0.908]
+  mask_feature           none  coordinates_only +0.219 [+0.145, +0.278] -1.534 [-2.305, -1.108] +0.470 [+0.379, +0.509]
+  mask_feature           none mask_density_only -0.016 [-0.082, +0.012] -0.835 [-1.465, -0.508] +0.016 [-0.001, +0.058]
+  mask_feature           none       survey_mean +0.088 [-0.015, +0.154] -0.725 [-1.233, -0.366] +0.080 [+0.013, +0.147]
+  substitution            clr             ridge +0.753 [+0.635, +0.828] +0.397 [+0.159, +0.499] +0.778 [+0.657, +0.846]
+  substitution            clr    xgb_regression +0.844 [+0.713, +0.895] +0.200 [-0.283, +0.342] +0.867 [+0.756, +0.913]
+  substitution            ilr             ridge +0.753 [+0.635, +0.828] +0.397 [+0.157, +0.503] +0.778 [+0.657, +0.847]
+  substitution            ilr    xgb_regression +0.837 [+0.696, +0.881] +0.181 [-0.243, +0.419] +0.858 [+0.746, +0.906]
+  substitution           none  coordinates_only +0.219 [+0.129, +0.283] -1.534 [-2.280, -1.101] +0.470 [+0.379, +0.512]
+  substitution           none mask_density_only -0.016 [-0.078, +0.012] -0.835 [-1.465, -0.498] +0.016 [-0.002, +0.058]
+  substitution           none       survey_mean +0.088 [-0.015, +0.144] -0.725 [-1.229, -0.347] +0.080 [+0.016, +0.147]
+  substitution            raw             ridge +0.523 [+0.387, +0.606] -0.083 [-0.354, +0.117] +0.561 [+0.418, +0.640]
+  substitution            raw    xgb_regression +0.848 [+0.738, +0.910] +0.460 [+0.164, +0.630] +0.876 [+0.770, +0.926]
+
+INFLATION, random minus leave-one-survey-out
+        regime representation             model  n_elements  inflation_median  ci_low  ci_high  blocking_recovers_median  blocking_ci_low  blocking_ci_high
+  common_floor            ilr             ridge          44            0.2669  0.1275   0.3337                    0.0112           0.0072            0.0143
+  substitution            raw    xgb_regression          44            0.3659  0.2487   0.6351                    0.0222           0.0169            0.0333
+  common_floor            ilr    xgb_regression          44            0.3737  0.2931   0.5721                    0.0277           0.0183            0.0372
+  common_floor            ilr           xgb_aft          44            0.4081  0.3331   0.7306                    0.0322           0.0198            0.0458
+  substitution            ilr             ridge          44            0.4116  0.3133   0.5033                    0.0155           0.0103            0.0259
+  substitution            clr             ridge          44            0.4116  0.3241   0.5033                    0.0155           0.0103            0.0258
+  substitution            ilr    xgb_regression          44            0.5891  0.4145   0.7713                    0.0267           0.0210            0.0441
+  mask_feature            ilr    xgb_regression          44            0.6297  0.4561   0.8847                    0.0306           0.0189            0.0426
+  substitution            clr    xgb_regression          44            0.6299  0.5344   0.8384                    0.0249           0.0188            0.0364
+  substitution            raw             ridge          44            0.6533  0.4309   0.8950                    0.0275           0.0185            0.0424
+  common_floor           none       survey_mean          44            0.7398  0.3846   1.4517                    0.0073          -0.0062            0.0170
+  common_floor           none mask_density_only          44            0.8063  0.4411   1.2275                    0.0228           0.0133            0.0367
+  substitution           none       survey_mean          44            0.8500  0.3846   1.5004                    0.0060          -0.0048            0.0198
+  mask_feature           none       survey_mean          44            0.8500  0.3846   1.5176                    0.0060          -0.0037            0.0198
+  mask_feature            ilr             ridge          44            0.8667  0.6691   1.0885                    0.0174           0.0111            0.0288
+  substitution           none mask_density_only          44            0.8739  0.4825   1.2138                    0.0257           0.0155            0.0415
+  mask_feature           none mask_density_only          44            0.8739  0.4746   1.2275                    0.0257           0.0155            0.0424
+  common_floor           none  coordinates_only          44            1.6596  1.4337   2.7935                    0.2317           0.1967            0.2473
+  substitution           none  coordinates_only          44            1.7716  1.5752   2.7941                    0.2343           0.2007            0.2681
+  mask_feature           none  coordinates_only          44            1.7716  1.5752   2.9009                    0.2343           0.2007            0.2651
+
+  blocking_recovers is random minus blocked: how much of the inflation
+  spatially blocked validation actually removes. Compare it against the
+  inflation beside it. If it is the smaller number, then the protocol the
+  field recommends for optimistic cross-validation does not address this
+  failure, because the structure being leaked is laboratory identity and
+  not distance.
+
+THE FALSIFICATION TEST
+  Spearman rho between log10 of an element's cross-survey detection-limit
+  ratio and that element's inflation. Positive means censoring disparity
+  drives inflation; zero or negative refutes the mechanism on real data.
+        regime representation          model  n_elements  spearman_rho  p_value  rho_ci_low  rho_ci_high  n_affinity_groups  rho_block_ci_low  rho_block_ci_high
+  common_floor            ilr xgb_regression          39        0.3493   0.0293      0.0239       0.6267                  5           -0.0469             0.5564
+  mask_feature            ilr xgb_regression          39        0.3167   0.0495     -0.0179       0.5858                  5           -0.1303             0.6071
+  substitution            clr xgb_regression          39        0.3971   0.0123      0.0834       0.6356                  5            0.0282             0.6252
+  substitution            ilr xgb_regression          39        0.3792   0.0173      0.0481       0.6525                  5            0.1345             0.5939
+  substitution            raw xgb_regression          39        0.4624   0.0030      0.1827       0.6745                  5            0.0398             0.6500
+
+  Two intervals are given per arm. rho_ci_* resamples elements, which
+  assumes they are independent; they are not, since the composition is
+  closed and every element is estimated on the same samples.
+  rho_block_ci_* resamples whole affinity classes instead and is the
+  interval the dependence structure actually supports.
+
+  VERDICT: MECHANISM SUPPORTED
+    judged on the pre-registered primary arm alone: substitution/ilr/xgb_regression
+    rho +0.3792 [+0.0481, +0.6525], p = 0.0173, n = 39 elements
+    sensitivity arms whose interval also clears zero: 3 of 4
+
+  The primary arm is fixed in advance so that the verdict cannot be chosen
+  after the fact from whichever arm happens to agree. mask_feature is a
+  CONTROL - the mask handed to the model as a feature - and a control that
+  disagrees is information about the control, not a veto over the primary.
+
+  A negative result here is publishable and is not to be repaired by
+  subsetting elements until the correlation appears. It would mean the
+  identity channel is real, the inflation is real, and the link between
+  them is not established on these surveys.
+
+HOW MUCH OF THE INFLATION IS ATTRIBUTABLE TO THE LIMITS (split at 2x)
+        regime representation          model  n_divergent  n_agreeing  inflation_divergent  divergent_ci_low  divergent_ci_high  inflation_agreeing  agreeing_ci_low  agreeing_ci_high  excess_attributable_to_limits  mann_whitney_p
+  common_floor            ilr xgb_regression           28          11               0.4412            0.3008             0.8336              0.2715           0.1817            0.3889                         0.1697          0.0651
+  mask_feature            ilr xgb_regression           28          11               0.6945            0.4201             1.2829              0.6148           0.3549            1.0374                         0.0797          0.1869
+  substitution            clr xgb_regression           28          11               0.7008            0.5538             1.5042              0.5737           0.4069            0.8384                         0.1271          0.1088
+  substitution            ilr xgb_regression           28          11               0.6278            0.4049             1.2229              0.5650           0.2609            0.8401                         0.0628          0.1273
+  substitution            raw xgb_regression           28          11               0.6140            0.2764             1.1810              0.2358           0.1605            0.2841                         0.3782          0.0085
+
+  The pooled inflation is the whole random-minus-leave-one-survey-out gap,
+  and that gap has two sources: the censoring this study is about, and the
+  genuine geochemical difference between three continents. Elements whose
+  limits agree across surveys carry the second and almost none of the
+  first, so their inflation is a floor and the excess above it is what the
+  limits add. The groups are not randomised and differ in more than their
+  limits, so this is a contrast, not a decomposition, and is reported as one.
+
+PAIRED COMPARISONS UNDER LEAVE-ONE-SURVEY-OUT (xgb_regression, Wilcoxon signed-rank, Benjamini-Hochberg)
+  protocol          model            arm_a            arm_b  n_elements  median_difference  ci_low  ci_high  wilcoxon_statistic  p_value  p_value_bh
+      loso xgb_regression common_floor/ilr substitution/clr          44             0.2800  0.1980   0.3757                23.0   0.0000      0.0000
+      loso xgb_regression substitution/clr substitution/ilr          44            -0.1110 -0.1822  -0.0409               172.0   0.0001      0.0004
+      loso xgb_regression substitution/clr substitution/raw          44            -0.2347 -0.3841  -0.1679               184.0   0.0002      0.0005
+      loso xgb_regression common_floor/ilr substitution/ilr          44             0.1519  0.0939   0.3212               198.0   0.0003      0.0008
+      loso xgb_regression mask_feature/ilr substitution/raw          44            -0.1959 -0.3155  -0.0840               258.0   0.0050      0.0093
+      loso xgb_regression substitution/ilr substitution/raw          44            -0.1724 -0.2713  -0.0707               263.0   0.0061      0.0093
+      loso xgb_regression common_floor/ilr mask_feature/ilr          44             0.1612  0.0628   0.2487               265.0   0.0065      0.0093
+      loso xgb_regression mask_feature/ilr substitution/clr          44             0.0928  0.0440   0.1864               285.0   0.0135      0.0168
+      loso xgb_regression mask_feature/ilr substitution/ilr          44            -0.0117 -0.0587   0.0027               387.0   0.2119      0.2354
+      loso xgb_regression common_floor/ilr substitution/raw          44            -0.0436 -0.1147  -0.0062               411.0   0.3332      0.3332
+
+  Paired on the same elements, so the test uses the pairing rather
+  than discarding it. Uncorrected p-values are shown beside the
+  corrected ones so the correction can be checked.
+
+GAPS, STATED RATHER THAN OMITTED
+  Intervals over SAMPLES are not computed. 07_validate.py writes one R2
+  per fold, not per-sample residuals, and an over-samples bootstrap needs
+  the residuals. Producing them means re-running the grid with residuals
+  stored - a cost decision, not an oversight to be written around.
+
+  McNemar and DeLong are not computed. They belong to the classification
+  experiments in 03_masks.py and need per-sample predictions, which that
+  script does not write; it writes confusion matrices. The same fix
+  applies: store predictions, then the tests become available.
+
+written to 05-results/: 08_interval_by_arm.csv, 08_inflation_by_arm.csv,
+  08_inflation_vs_lod_ratio.csv, 08_paired_tests.csv, 08_stats_report.txt

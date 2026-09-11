@@ -1,0 +1,24 @@
+07_pipeline_selftest report
+
+rows 8,233   elements 44   targets tested Cu, Ag
+
+                                      check result                                                                                                                                    detail
+                           target isolation   PASS largest |correlation| between any feature and the target is 0.6492 across 6 designs; 1.000 would mean the target survived in the features
+                                determinism   PASS                                           two identical fits differ by at most 0.000e+00; anything above zero means an unseeded generator
+                           permutation null   PASS                           median R2 with a shuffled target is -0.0826; must not be materially positive, and negative is the expected sign
+                           target isolation   PASS largest |correlation| between any feature and the target is 0.5785 across 6 designs; 1.000 would mean the target survived in the features
+                                determinism   PASS                                           two identical fits differ by at most 0.000e+00; anything above zero means an unseeded generator
+                           permutation null   PASS                           median R2 with a shuffled target is -0.4493; must not be materially positive, and negative is the expected sign
+            blocked folds keep blocks whole   PASS                                                                                                  0 block(s) appear in both train and test
+  leave-one-survey-out holds the survey out   PASS                                                                                               0 survey(s) present on both sides of a fold
+       scored rows identical across regimes   PASS                                            99 target-protocol-fold groups checked across regimes, 0 disagree on how many rows were scored
+                        checkpoint fidelity   PASS                                  1,980 rows, 0 duplicate keys, 0 of them disagreeing on R2; duplicates are harmless only while they agree
+
+VERDICT: CLEAR TO RUN THE GRID
+
+  These checks test the machinery, not the science. They cannot tell you
+  whether the result is interesting; they can tell you that a seven-hour
+  run will not produce numbers that are wrong for a reason nobody looks
+  for afterwards.
+
+written to 05-results/: 07_pipeline_selftest.csv, 07_pipeline_selftest.txt

@@ -1,0 +1,120 @@
+05_regimes report
+
+pooled input      8,285 rows x 44 elements
+common base       8,233 rows (99.4% of pooled)
+
+THE COMMON BASE
+                  filter survey    n  retained  retention_pct
+  no never-measured cell  GEMAS 2113      2108          99.76
+  no never-measured cell  NASGL 4857      4813          99.09
+  no never-measured cell   NGSA 1315      1312          99.77
+
+  Rows are dropped here only for cells that were never measured, never for
+  censored cells. Retention differs by survey, which is E1d operating on
+  this study rather than on Shelton et al. The filter is identical across
+  all four regimes, so it cannot produce a difference between them.
+
+REGIME SIZES
+  (a) substitution     8,233 rows, all base rows retained
+  (b) complete_case    868 rows (10.5% of base)
+                  filter survey    n  retained  retention_pct
+  complete-case deletion  GEMAS 2108       863          40.94
+  complete-case deletion  NASGL 4813         3           0.06
+  complete-case deletion   NGSA 1312         2           0.15
+      viable for modelling: NO (needs >= 100 rows in EVERY survey, not in total:
+      leave-one-survey-out holds a whole survey out, so a regime that keeps
+      one survey and empties the others cannot be validated across regions
+      at all, whatever its pooled row count looks like)
+  (c) mask_feature     8,233 rows, 44 values + 44 mask columns
+  (d) common_floor     8,233 rows, 51,221 censored cells after flooring
+
+  Sample counts are NOT matched across regimes, and cannot be: deletion
+  removes rows by construction. 07_validate.py therefore reports every
+  regime both on its own rows and restricted to the intersection, so that
+  a difference in performance is never silently a difference in n.
+
+  Complete-case deletion scales with the number of features, not with the
+  censoring rate of any one of them. Shelton et al. (2021) applied it over
+  seven and nine features; the downstream task here uses 43,
+  since every element except the rotating target is a predictor. If the
+  regime retains too few samples or empties a survey, that is a result about
+  the remedy rather than a defect in this script: deletion does not survive
+  continental-scale multi-element data, and any comparison that reports it
+  as viable is reporting on a much smaller feature set than it appears to.
+
+COST OF THE COMMON FLOOR
+  survey  censored_pct_before  censored_pct_after  values_newly_censored
+   NASGL                9.347              10.916                   3322
+    NGSA               11.040              18.305                   4194
+   GEMAS                1.508              18.907                  16138
+
+  This is the correction being paid for. Harmonisation can only go upwards,
+  so every survey that measured more finely than the coarsest one loses the
+  values it resolved below that limit. The count above is real information
+  discarded, and it is reported with the correction rather than after it.
+
+  widest limit disparities driving the floor
+  element  lod_NASGL  lod_NGSA  lod_GEMAS  common_floor  n_surveys_with_limit  limit_ratio
+       Cs       5.00      0.10        NaN           5.0                     2     50.00000
+       Ag       1.00      0.03        NaN           1.0                     2     33.33333
+       Be       0.10      1.10       0.05           1.1                     3     22.00000
+       Se       0.20      0.01       0.05           0.2                     3     20.00000
+        S     100.00     10.00       5.00         100.0                     3     20.00000
+       Th       0.20      0.02        NaN           0.2                     2     10.00000
+        W       0.10      0.10       0.01           0.1                     3     10.00000
+       Li       1.00      0.10        NaN           1.0                     2     10.00000
+        V       1.00      0.10        NaN           1.0                     2     10.00000
+       Sb       0.05      0.40        NaN           0.4                     2      8.00000
+
+VARIABLE SELECTION AS A FIFTH CHANNEL (Engle and Brunner screen, S/N < 0.5)
+  GEMAS    retains 44 of 44 elements
+  NASGL    retains 44 of 44 elements
+  NGSA     retains 44 of 44 elements
+  GEMAS    drops: none
+  NASGL    drops: none
+  NGSA     drops: none
+
+  elements with no disclosed limit, which the screen keeps by default
+  survey  n_limits_unknown
+   GEMAS                38
+   NASGL                 5
+  An unknown limit gives an infinite ratio and automatic retention. That is
+  silence, not sensitivity, and it favours whichever survey publishes least.
+
+  VERDICT E2-selection at U = 0: NOT EVALUABLE
+    elements retained by every survey     44
+    elements retained by some but not all 0
+
+  Read a non-divergence here as an underpowered test, not as a negative
+  result. With U = 0 the ratio is 3S/DL, which almost nothing fails, and
+  an undisclosed limit is retained automatically. The screen cannot be
+  evaluated on data that does not carry the uncertainty it consumes.
+
+  WHAT CAN BE SAID: the uncertainty at which the screen would bite
+    smallest U that drops any element anywhere   0.03541 mg/kg
+    smallest U at which the surviving sets differ 0.03541 mg/kg
+  element  first_drop_at_uncertainty  last_drop_at_uncertainty  surveys_that_never_drop_it  diverges
+       In                    0.03541                   0.07333                           0      True
+       Hg                    0.03667                   0.03667                           1      True
+       Te                    0.07134                   0.16667                           0      True
+       Se                    0.11667                   0.73333                           0      True
+        W                    0.14340                   1.96667                           0      True
+       Tl                    0.17333                   0.76667                           1      True
+       Cd                    0.30667                   0.36667                           1      True
+       Bi                    0.32667                   0.36333                           1      True
+
+  Above that second value the surviving variable set depends on which
+  survey a sample came from, which is a leakage channel opening before any
+  handling regime is chosen, and no regime downstream can close it. Whether
+  real analytical uncertainty reaches it is a question for the laboratories,
+  not for this dataset, and it is left stated rather than guessed.
+
+NOT DONE HERE
+  Nothing is transformed. Regimes fill values in composition space; the
+  frozen contrast matrix from 04_transform.py is applied in 06_models.py,
+  in that order and never the reverse.
+
+written to 02-datasets/processed/: regime_base_meta.parquet, regime_substitution_conc.parquet, regime_base_mask.parquet, regime_common_floor_conc.parquet, regime_common_floor_mask.parquet, regime_common_floor_bounds.parquet
+written to 05-results/: 05_common_floor.csv, 05_common_floor_cost.csv,
+  05_signal_to_noise.csv, 05_screen_uncertainty_thresholds.csv,
+  05_regimes_report.txt

@@ -1,0 +1,62 @@
+06_models report
+
+rows              8,233
+elements          44   target rotates over all of them
+smoke target      Cu
+scoreable rows    8,212 (99.7%) - uncensored AND above the common floor
+
+ONE TARGET, LEAVE-ONE-SURVEY-OUT
+        regime representation             model  n_features  r2_loso_median  r2_holdout_GEMAS  r2_holdout_NASGL  r2_holdout_NGSA
+  substitution            raw       survey_mean          43       -0.010689           -0.0021           -0.0107          -0.0312
+  substitution            raw  coordinates_only          43       -1.148054           -0.6770           -1.1481          -5.9685
+  substitution            raw mask_density_only          43        0.107981           -0.5844            0.1080           0.3463
+  substitution            raw             ridge          43        0.117225            0.1172           -0.8241           0.6633
+  substitution            raw    xgb_regression          43        0.508052            0.5081            0.5292           0.4931
+  substitution            clr       survey_mean          44       -0.010689           -0.0021           -0.0107          -0.0312
+  substitution            clr  coordinates_only          44       -1.148054           -0.6770           -1.1481          -5.9685
+  substitution            clr mask_density_only          44        0.107981           -0.5844            0.1080           0.3463
+  substitution            clr             ridge          44        0.502541            0.5025            0.6096           0.3210
+  substitution            clr    xgb_regression          44        0.261628            0.2616            0.4578          -0.8349
+  substitution            ilr       survey_mean          43       -0.010689           -0.0021           -0.0107          -0.0312
+  substitution            ilr  coordinates_only          43       -1.148054           -0.6770           -1.1481          -5.9685
+  substitution            ilr mask_density_only          43        0.107981           -0.5844            0.1080           0.3463
+  substitution            ilr             ridge          43        0.502541            0.5025            0.6096           0.3210
+  substitution            ilr    xgb_regression          43        0.129330            0.1293            0.5386          -0.4303
+  mask_feature            ilr       survey_mean          86       -0.010689           -0.0021           -0.0107          -0.0312
+  mask_feature            ilr  coordinates_only          86       -1.148054           -0.6770           -1.1481          -5.9685
+  mask_feature            ilr mask_density_only          86        0.107981           -0.5844            0.1080           0.3463
+  mask_feature            ilr             ridge          86       -0.003899            0.2638           -2.3138          -0.0039
+  mask_feature            ilr    xgb_regression          86        0.069080            0.0691            0.4835          -0.1253
+  common_floor            ilr       survey_mean          43       -0.009595           -0.0018           -0.0096          -0.0312
+  common_floor            ilr  coordinates_only          43       -0.918851           -0.8669           -0.9189          -6.3375
+  common_floor            ilr mask_density_only          43        0.116958           -0.5746            0.1170           0.3463
+  common_floor            ilr             ridge          43        0.614635            0.6146            0.5719           0.6850
+  common_floor            ilr    xgb_regression          43        0.450537            0.3333            0.5114           0.4505
+  common_floor            ilr           xgb_aft          43        0.438321            0.2166            0.4383           0.4893
+
+  Every regime is scored on the SAME rows: those where the target was
+  measured and sits above the common floor. A regime scored on its own
+  substituted constants would be predicting a number it wrote itself.
+
+  Negative R2 is not a bug. Leave-one-survey-out asks a model trained on
+  two continents to predict a third, and a model can be worse than that
+  continent's own mean. Compare against survey_mean in the table above,
+  not against zero.
+
+READ THE BASELINES FIRST
+  coordinates_only and mask_density_only are adversarial. If either comes
+  close to xgb_regression, the full model has learned position or
+  laboratory rather than geochemistry, and nothing downstream can repair
+  that reading.
+
+COST OF THE FULL GRID
+  measured                10.52 s per fit, summed over the model set above
+  fits per target         28 (5 folds x 5 repeats + 3 leave-one-survey-out)
+  targets                 44
+  estimated total         3.6 hours, before spatial blocking
+
+  Spatial blocking adds one fold set per survey and is costed in
+  07_validate.py, where the block size comes from the variogram rather
+  than from a guess.
+
+written to 05-results/: 06_model_smoke.csv, 06_models_report.txt

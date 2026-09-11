@@ -1,0 +1,6 @@
+regime,representation,model,n_divergent,n_agreeing,inflation_divergent,divergent_ci_low,divergent_ci_high,inflation_agreeing,agreeing_ci_low,agreeing_ci_high,excess_attributable_to_limits,mann_whitney_p
+common_floor,ilr,xgb_regression,28,11,0.4412,0.3008,0.8336,0.2715,0.1817,0.3889,0.1697,0.0651
+mask_feature,ilr,xgb_regression,28,11,0.6945,0.4201,1.2829,0.6148,0.3549,1.0374,0.0797,0.1869
+substitution,clr,xgb_regression,28,11,0.7008,0.5538,1.5042,0.5737,0.4069,0.8384,0.1271,0.1088
+substitution,ilr,xgb_regression,28,11,0.6278,0.4049,1.2229,0.565,0.2609,0.8401,0.0628,0.1273
+substitution,raw,xgb_regression,28,11,0.614,0.2764,1.181,0.2358,0.1605,0.2841,0.3782,0.0085

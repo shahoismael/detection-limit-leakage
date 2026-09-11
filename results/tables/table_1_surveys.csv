@@ -1,0 +1,4 @@
+survey,n_samples,n_elements,elements_with_censoring,censored_cells_pct,lowest_rate_element,lowest_rate_pct,highest_rate_element,highest_rate_pct,flag_convention
+GEMAS,2113,53,15,8.13,S,1.28,Ta,93.37,"no flag; substituted at LOD/2 before delivery, mask reconstructed"
+NASGL,4857,44,39,9.26,Nb,0.02,Ag,98.81,"reported as ""<value""; limit read from the flag"
+NGSA,1315,52,36,13.57,Fe,0.08,Ag,99.16,"reported as ""<value""; limit also declared in the column header"

@@ -1,0 +1,57 @@
+04_transform report
+
+pooled matrix     8,285 rows x 44 shared elements
+  survey  n_rows  n_elements  censored_pct  unavailable_pct  coordinates_missing   latitude_range   longitude_range
+   NASGL    4857          44          9.26            10.17                    0   25.14 to 48.98 -124.40 to -67.52
+    NGSA    1315          44         11.02            11.17                    0 -43.33 to -11.03  113.81 to 153.33
+   GEMAS    2113          44          1.50             1.74                   10   28.47 to 70.59   -16.34 to 35.15
+
+ELEMENT ORDER (fixed in advance; the partition is built from it)
+  rock_forming_lithophile  Al, Fe, Ca, Mg, Na, K, Ti, Mn, P
+  alkali_alkaline_earth    Li, Be, Rb, Cs, Sr, Ba
+  hfse_ree                 Sc, Y, La, Ce, Nb, Th, U, Ga
+  transition_siderophile   V, Cr, Co, Ni, Cu, Zn, Mo, W
+  chalcophile_volatile     Ag, As, Bi, Cd, Hg, In, Pb, S, Sb, Se, Sn, Te, Tl
+
+ISOMETRIC LOG-RATIO GEOMETRY
+  balances                       43 for 44 parts
+  contrast orthonormality error  6.66e-16
+  isometry error vs Aitchison    3.55e-15
+  CLR row sum, max |.|           7.02e-14
+  round trip error               1.39e-16
+  geometry verified              yes
+
+  leading balances, which are the interpretable ones
+   balance  n_plus  n_minus                                 plus_parts                                                                       minus_parts
+         1      15       29 Al Fe Ca Mg Na K Ti Mn P Li Be Rb Cs Sr Ba Sc Y La Ce Nb Th U Ga V Cr Co Ni Cu Zn Mo W Ag As Bi Cd Hg In Pb S Sb Se Sn Te Tl
+         2       9        6                   Al Fe Ca Mg Na K Ti Mn P                                                                 Li Be Rb Cs Sr Ba
+         3       4        5                                Al Fe Ca Mg                                                                      Na K Ti Mn P
+         4       2        2                                      Al Fe                                                                             Ca Mg
+
+WHY THE ILR IS PRIMARY
+  CLR coordinates of independent data correlate at -0.02325 on average,
+  against the -1/(D-1) = -0.02326 the singularity predicts. The artefact is
+  harmless only while D is the same for every survey, which is why D is
+  held at 44 here and stated rather than assumed.
+
+PREREQUISITES FOR LOG-RATIO WORK
+  non-positive measured values   0 (OK)
+  coordinates within valid range yes (tested on located rows only)
+  rows without coordinates       5 - excluded from the spatially blocked arm only, kept for random CV and leave-one-survey-out
+
+ELEMENTS DISCARDED BY THE SHARED-SET RESTRICTION
+  NASGL measured 44, kept 44, NGSA measured 52, kept 44, GEMAS measured 53, kept 44
+  Restriction is required: if the element set differed by survey, a model
+  could separate surveys on which columns exist rather than on which cells
+  are censored, and D would differ, reactivating the CLR artefact above.
+
+NOT DONE HERE, DELIBERATELY
+  No survey data was transformed. Non-detects are still empty, and a
+  log-ratio is undefined at zero, so transforming now would require a
+  substitution before the comparison of substitutions has been made and
+  the study would be measuring its own preprocessing. 05_regimes.py fills
+  values in composition space; coordinates are computed after that, from
+  the contrast matrix frozen here.
+
+written to 02-datasets/processed/: pooled_meta.parquet, pooled_conc.parquet, pooled_mask.parquet, pooled_lod.parquet, ilr_partition.csv, ilr_contrast_matrix.csv
+written to 05-results/: 04_transform_report.txt

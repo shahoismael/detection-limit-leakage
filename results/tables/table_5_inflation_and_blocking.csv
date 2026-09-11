@@ -1,0 +1,21 @@
+regime,representation,model,n_elements,inflation,blocking_recovers,pct_of_inflation_recovered
+common_floor,ilr,ridge,44,"+0.267 [+0.128, +0.334]","+0.011 [+0.007, +0.014]",4.2
+common_floor,ilr,xgb_regression,44,"+0.374 [+0.293, +0.572]","+0.028 [+0.018, +0.037]",7.4
+common_floor,ilr,xgb_aft,44,"+0.408 [+0.333, +0.731]","+0.032 [+0.020, +0.046]",7.9
+common_floor,none,survey_mean,44,"+0.740 [+0.385, +1.452]","+0.007 [-0.006, +0.017]",1.0
+common_floor,none,mask_density_only,44,"+0.806 [+0.441, +1.228]","+0.023 [+0.013, +0.037]",2.8
+common_floor,none,coordinates_only,44,"+1.660 [+1.434, +2.793]","+0.232 [+0.197, +0.247]",14.0
+mask_feature,ilr,xgb_regression,44,"+0.630 [+0.456, +0.885]","+0.031 [+0.019, +0.043]",4.9
+mask_feature,none,survey_mean,44,"+0.850 [+0.385, +1.518]","+0.006 [-0.004, +0.020]",0.7
+mask_feature,ilr,ridge,44,"+0.867 [+0.669, +1.089]","+0.017 [+0.011, +0.029]",2.0
+mask_feature,none,mask_density_only,44,"+0.874 [+0.475, +1.228]","+0.026 [+0.015, +0.042]",2.9
+mask_feature,none,coordinates_only,44,"+1.772 [+1.575, +2.901]","+0.234 [+0.201, +0.265]",13.2
+substitution,raw,xgb_regression,44,"+0.366 [+0.249, +0.635]","+0.022 [+0.017, +0.033]",6.1
+substitution,ilr,ridge,44,"+0.412 [+0.313, +0.503]","+0.015 [+0.010, +0.026]",3.8
+substitution,clr,ridge,44,"+0.412 [+0.324, +0.503]","+0.015 [+0.010, +0.026]",3.8
+substitution,ilr,xgb_regression,44,"+0.589 [+0.414, +0.771]","+0.027 [+0.021, +0.044]",4.5
+substitution,clr,xgb_regression,44,"+0.630 [+0.534, +0.838]","+0.025 [+0.019, +0.036]",4.0
+substitution,raw,ridge,44,"+0.653 [+0.431, +0.895]","+0.028 [+0.018, +0.042]",4.2
+substitution,none,survey_mean,44,"+0.850 [+0.385, +1.500]","+0.006 [-0.005, +0.020]",0.7
+substitution,none,mask_density_only,44,"+0.874 [+0.482, +1.214]","+0.026 [+0.015, +0.042]",2.9
+substitution,none,coordinates_only,44,"+1.772 [+1.575, +2.794]","+0.234 [+0.201, +0.268]",13.2

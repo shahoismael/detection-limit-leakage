@@ -1,0 +1,22 @@
+experiment,description,model,n_features,no_information_rate,balanced_accuracy,balanced_accuracy_sd,macro_f1,macro_f1_sd,kappa,kappa_sd
+E1a_mask_density,per-row count of non-detects; element identity discarded,majority_class,1,0.5862,0.3333,0.0,0.2464,0.0001,0.0,0.0
+E1a_mask_density,per-row count of non-detects; element identity discarded,logistic,1,0.5862,0.6397,0.0042,0.6016,0.0041,0.6242,0.0078
+E1a_mask_density,per-row count of non-detects; element identity discarded,gradient_boosting,1,0.5862,0.6408,0.004,0.6006,0.0033,0.6293,0.0074
+E1b_full_mask,element-resolved binary mask,majority_class,44,0.5862,0.3333,0.0,0.2464,0.0001,0.0,0.0
+E1b_full_mask,element-resolved binary mask,logistic,44,0.5862,0.9741,0.0086,0.976,0.0044,0.9657,0.0059
+E1b_full_mask,element-resolved binary mask,gradient_boosting,44,0.5862,0.9782,0.0088,0.9773,0.0044,0.9672,0.0058
+NULL_permuted_labels,"element-resolved mask, survey labels permuted",majority_class,44,0.5862,0.3333,0.0,0.2464,0.0001,0.0,0.0
+NULL_permuted_labels,"element-resolved mask, survey labels permuted",logistic,44,0.5862,0.3339,0.0011,0.2491,0.0022,0.0016,0.0027
+NULL_permuted_labels,"element-resolved mask, survey labels permuted",gradient_boosting,44,0.5862,0.331,0.0029,0.2618,0.0049,-0.0046,0.0071
+E1d_survival_k5,"complete-case survive flag over 5 features: Te, Ag, Cs, Se, Cd",majority_class,1,0.5862,0.3333,0.0,0.2464,0.0001,0.0,0.0
+E1d_survival_k5,"complete-case survive flag over 5 features: Te, Ag, Cs, Se, Cd",logistic,1,0.5862,0.479,0.0074,0.4674,0.0081,0.3293,0.0155
+E1d_survival_k5,"complete-case survive flag over 5 features: Te, Ag, Cs, Se, Cd",gradient_boosting,1,0.5862,0.479,0.0074,0.4674,0.0081,0.3293,0.0155
+E1d_survival_k7,"complete-case survive flag over 7 features: Te, Ag, Cs, Se, Cd, In, Sb",majority_class,1,0.5862,0.3333,0.0,0.2464,0.0001,0.0,0.0
+E1d_survival_k7,"complete-case survive flag over 7 features: Te, Ag, Cs, Se, Cd, In, Sb",logistic,1,0.5862,0.4764,0.0078,0.4645,0.0086,0.3236,0.0162
+E1d_survival_k7,"complete-case survive flag over 7 features: Te, Ag, Cs, Se, Cd, In, Sb",gradient_boosting,1,0.5862,0.4764,0.0078,0.4645,0.0086,0.3236,0.0162
+E1d_survival_k9,"complete-case survive flag over 9 features: Te, Ag, Cs, Se, Cd, In, Sb, Hg, Be",majority_class,1,0.5862,0.3333,0.0,0.2464,0.0001,0.0,0.0
+E1d_survival_k9,"complete-case survive flag over 9 features: Te, Ag, Cs, Se, Cd, In, Sb, Hg, Be",logistic,1,0.5862,0.4759,0.0079,0.464,0.0087,0.3226,0.0164
+E1d_survival_k9,"complete-case survive flag over 9 features: Te, Ag, Cs, Se, Cd, In, Sb, Hg, Be",gradient_boosting,1,0.5862,0.4759,0.0079,0.464,0.0087,0.3226,0.0164
+E1d_survival_k12,"complete-case survive flag over 12 features: Te, Ag, Cs, Se, Cd, In, Sb, Hg, Be, S, Tl, Mo",majority_class,1,0.5862,0.3333,0.0,0.2464,0.0001,0.0,0.0
+E1d_survival_k12,"complete-case survive flag over 12 features: Te, Ag, Cs, Se, Cd, In, Sb, Hg, Be, S, Tl, Mo",logistic,1,0.5862,0.4724,0.0076,0.4601,0.0085,0.3154,0.0158
+E1d_survival_k12,"complete-case survive flag over 12 features: Te, Ag, Cs, Se, Cd, In, Sb, Hg, Be, S, Tl, Mo",gradient_boosting,1,0.5862,0.4724,0.0076,0.4601,0.0085,0.3154,0.0158

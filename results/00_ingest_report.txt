@@ -1,0 +1,28 @@
+00_ingest report
+
+assumptions in force
+  NGSA stratum        TOS, <2 mm
+  NGSA method order   ICP-MS,XRF,FA,ISE,AR,MMI-ME
+  GEMAS digestion     aqua regia (XRF block not used for the shared matrix)
+  GEMAS censoring     reconstructed from the LOD/2 signature, NOT read from a flag
+
+records
+  NASGL    4,857 rows   44 elements    9.26% of cells censored
+  NGSA     1,315 rows   52 elements   13.57% of cells censored
+  GEMAS    2,113 rows   53 elements    8.13% of cells censored
+
+shared elements across all three surveys: 44
+  Ag, Al, As, Ba, Be, Bi, Ca, Cd, Ce, Co, Cr, Cs, Cu, Fe, Ga, Hg, In, K, La, Li, Mg, Mn, Mo, Na, Nb, Ni, P, Pb, Rb, S, Sb, Sc, Se, Sn, Sr, Te, Th, Ti, Tl, U, V, W, Y, Zn
+
+A3 gate  (>=10 shared elements)              PASS
+E0a gate (>=10 shared with LOD ratio >= 2x)  PASS   [28 of 44]
+
+GEMAS detection limits are RECOVERED, not published values. Verify every row of
+00_gemas_lod_recovery.csv against the published GEMAS limits and set
+verified_against_published_lod before any recovered limit is used downstream.
+  corroboration: dominance over the next most frequent value ranges from 24x to 1973x, and the substituted share from 1.3% to 93.4%.
+  Being the column minimum is NOT corroboration here: it is one of the
+  acceptance tests, so every recovered spike satisfies it by construction.
+
+written to 02-datasets/interim/:
+  gemas_conc.parquet, gemas_lod.parquet, gemas_mask.parquet, gemas_meta.parquet, nasgl_conc.parquet, nasgl_lod.parquet, nasgl_mask.parquet, nasgl_meta.parquet, ngsa_allmethods_conc.parquet, ngsa_allmethods_lod.parquet, ngsa_allmethods_mask.parquet, ngsa_conc.parquet, ngsa_lod.parquet, ngsa_mask.parquet, ngsa_meta.parquet, ngsa_method_catalogue.parquet

@@ -1,0 +1,150 @@
+survey,element,source_column,method,unit_reported,unit_factor_to_mg_per_kg,unit,lod_reported,lod_distinct_values,censored_n,censored_pct
+NASGL,Ag,A_Ag,"four-acid near-total, ICP-AES/ICP-MS",mg/kg,1.0,mg/kg,1.0,1,4799,98.806
+NASGL,Al,A_Al,"four-acid near-total, ICP-AES/ICP-MS",wt. %,10000.0,mg/kg,,0,0,0.0
+NASGL,As,A_As,"four-acid near-total, ICP-AES/ICP-MS",mg/kg,1.0,mg/kg,0.6,1,67,1.379
+NASGL,Ba,A_Ba,"four-acid near-total, ICP-AES/ICP-MS",mg/kg,1.0,mg/kg,,0,0,0.0
+NASGL,Be,A_Be,"four-acid near-total, ICP-AES/ICP-MS",mg/kg,1.0,mg/kg,0.1,1,89,1.832
+NASGL,Bi,A_Bi,"four-acid near-total, ICP-AES/ICP-MS",mg/kg,1.0,mg/kg,0.04,1,118,2.429
+NASGL,Ca,A_Ca,"four-acid near-total, ICP-AES/ICP-MS",wt. %,10000.0,mg/kg,100.0,1,57,1.174
+NASGL,Cd,A_Cd,"four-acid near-total, ICP-AES/ICP-MS",mg/kg,1.0,mg/kg,0.1,1,1146,23.595
+NASGL,Ce,A_Ce,"four-acid near-total, ICP-AES/ICP-MS",mg/kg,1.0,mg/kg,0.05,1,2,0.041
+NASGL,Co,A_Co,"four-acid near-total, ICP-AES/ICP-MS",mg/kg,1.0,mg/kg,0.1,1,34,0.7
+NASGL,Cr,A_Cr,"four-acid near-total, ICP-AES/ICP-MS",mg/kg,1.0,mg/kg,1.0,1,12,0.247
+NASGL,Cs,A_Cs,"four-acid near-total, ICP-AES/ICP-MS",mg/kg,1.0,mg/kg,5.0,1,3942,81.161
+NASGL,Cu,A_Cu,"four-acid near-total, ICP-AES/ICP-MS",mg/kg,1.0,mg/kg,0.5,1,4,0.082
+NASGL,Fe,A_Fe,"four-acid near-total, ICP-AES/ICP-MS",wt. %,10000.0,mg/kg,100.0,1,6,0.124
+NASGL,Ga,A_Ga,"four-acid near-total, ICP-AES/ICP-MS",mg/kg,1.0,mg/kg,,0,0,0.0
+NASGL,Hg,A_Hg,"four-acid near-total, ICP-AES/ICP-MS",mg/kg,1.0,mg/kg,0.01,1,386,7.947
+NASGL,In,A_In,"four-acid near-total, ICP-AES/ICP-MS",mg/kg,1.0,mg/kg,0.02,1,1017,20.939
+NASGL,K,A_K,"four-acid near-total, ICP-AES/ICP-MS",wt. %,10000.0,mg/kg,100.0,1,26,0.535
+NASGL,La,A_La,"four-acid near-total, ICP-AES/ICP-MS",mg/kg,1.0,mg/kg,0.5,1,4,0.082
+NASGL,Li,A_Li,"four-acid near-total, ICP-AES/ICP-MS",mg/kg,1.0,mg/kg,1.0,1,13,0.268
+NASGL,Mg,A_Mg,"four-acid near-total, ICP-AES/ICP-MS",wt. %,10000.0,mg/kg,100.0,1,41,0.844
+NASGL,Mn,A_Mn,"four-acid near-total, ICP-AES/ICP-MS",mg/kg,1.0,mg/kg,5.0,1,14,0.288
+NASGL,Mo,A_Mo,"four-acid near-total, ICP-AES/ICP-MS",mg/kg,1.0,mg/kg,0.05,1,7,0.144
+NASGL,Na,A_Na,"four-acid near-total, ICP-AES/ICP-MS",wt. %,10000.0,mg/kg,100.0,1,182,3.747
+NASGL,Nb,A_Nb,"four-acid near-total, ICP-AES/ICP-MS",mg/kg,1.0,mg/kg,0.1,1,1,0.021
+NASGL,Ni,A_Ni,"four-acid near-total, ICP-AES/ICP-MS",mg/kg,1.0,mg/kg,0.5,1,9,0.185
+NASGL,P,A_P,"four-acid near-total, ICP-AES/ICP-MS",mg/kg,1.0,mg/kg,50.0,1,42,0.865
+NASGL,Pb,A_Pb,"four-acid near-total, ICP-AES/ICP-MS",mg/kg,1.0,mg/kg,0.5,1,1,0.021
+NASGL,Rb,A_Rb,"four-acid near-total, ICP-AES/ICP-MS",mg/kg,1.0,mg/kg,0.2,1,14,0.288
+NASGL,S,A_S,"four-acid near-total, ICP-AES/ICP-MS",wt. %,10000.0,mg/kg,100.0,1,583,12.003
+NASGL,Sb,A_Sb,"four-acid near-total, ICP-AES/ICP-MS",mg/kg,1.0,mg/kg,0.05,1,25,0.515
+NASGL,Sc,A_Sc,"four-acid near-total, ICP-AES/ICP-MS",mg/kg,1.0,mg/kg,0.1,1,10,0.206
+NASGL,Se,A_Se,"four-acid near-total, ICP-AES/ICP-MS",mg/kg,1.0,mg/kg,0.2,1,2116,43.566
+NASGL,Sn,A_Sn,"four-acid near-total, ICP-AES/ICP-MS",mg/kg,1.0,mg/kg,0.1,1,6,0.124
+NASGL,Sr,A_Sr,"four-acid near-total, ICP-AES/ICP-MS",mg/kg,1.0,mg/kg,0.5,1,2,0.041
+NASGL,Te,A_Te,"four-acid near-total, ICP-AES/ICP-MS",mg/kg,1.0,mg/kg,0.1,1,4655,95.841
+NASGL,Th,A_Th,"four-acid near-total, ICP-AES/ICP-MS",mg/kg,1.0,mg/kg,0.2,1,6,0.124
+NASGL,Ti,A_Ti,"four-acid near-total, ICP-AES/ICP-MS",wt. %,10000.0,mg/kg,,0,0,0.0
+NASGL,Tl,A_Tl,"four-acid near-total, ICP-AES/ICP-MS",mg/kg,1.0,mg/kg,0.1,1,276,5.683
+NASGL,U,A_U,"four-acid near-total, ICP-AES/ICP-MS",mg/kg,1.0,mg/kg,0.1,1,6,0.124
+NASGL,V,A_V,"four-acid near-total, ICP-AES/ICP-MS",mg/kg,1.0,mg/kg,1.0,1,10,0.206
+NASGL,W,A_W,"four-acid near-total, ICP-AES/ICP-MS",mg/kg,1.0,mg/kg,0.1,1,61,1.256
+NASGL,Y,A_Y,"four-acid near-total, ICP-AES/ICP-MS",mg/kg,1.0,mg/kg,,0,0,0.0
+NASGL,Zn,A_Zn,"four-acid near-total, ICP-AES/ICP-MS",mg/kg,1.0,mg/kg,1.0,1,6,0.124
+NGSA,Ag,Ag ICP-MS mg/kg 0.03,ICP-MS,mg/kg,1.0,mg/kg,0.03,1,1304,99.163
+NGSA,Al,Al XRF mg/kg 26,XRF,mg/kg,1.0,mg/kg,26.0,1,0,0.0
+NGSA,As,As ICP-MS mg/kg 0.4,ICP-MS,mg/kg,1.0,mg/kg,0.4,1,52,3.954
+NGSA,Au,Au FA mg/kg 0.001,FA,mg/kg,1.0,mg/kg,0.001,1,184,13.992
+NGSA,B,B AR mg/kg 1,AR,mg/kg,1.0,mg/kg,1.0,1,894,67.985
+NGSA,Ba,Ba ICP-MS mg/kg 0.5,ICP-MS,mg/kg,1.0,mg/kg,0.5,1,0,0.0
+NGSA,Be,Be ICP-MS mg/kg 1.1,ICP-MS,mg/kg,1.0,mg/kg,1.1,1,567,43.118
+NGSA,Bi,Bi ICP-MS mg/kg 0.02,ICP-MS,mg/kg,1.0,mg/kg,0.02,1,56,4.259
+NGSA,Ca,Ca XRF mg/kg 14,XRF,mg/kg,1.0,mg/kg,14.0,1,0,0.0
+NGSA,Cd,Cd ICP-MS mg/kg 0.1,ICP-MS,mg/kg,1.0,mg/kg,0.1,1,916,69.658
+NGSA,Ce,Ce ICP-MS mg/kg 0.03,ICP-MS,mg/kg,1.0,mg/kg,0.03,1,0,0.0
+NGSA,Co,Co ICP-MS mg/kg 0.1,ICP-MS,mg/kg,1.0,mg/kg,0.1,1,2,0.152
+NGSA,Cr,Cr ICP-MS mg/kg 0.5,ICP-MS,mg/kg,1.0,mg/kg,0.5,1,0,0.0
+NGSA,Cs,Cs ICP-MS mg/kg 0.1,ICP-MS,mg/kg,1.0,mg/kg,0.1,1,9,0.684
+NGSA,Cu,Cu ICP-MS mg/kg 0.2,ICP-MS,mg/kg,1.0,mg/kg,0.2,1,16,1.217
+NGSA,Fe,Fe AR mg/kg 100,AR,mg/kg,1.0,mg/kg,100.0,1,1,0.076
+NGSA,Ga,Ga ICP-MS mg/kg 0.1,ICP-MS,mg/kg,1.0,mg/kg,0.1,1,3,0.228
+NGSA,Ge,Ge ICP-MS mg/kg 0.04,ICP-MS,mg/kg,1.0,mg/kg,0.04,1,21,1.597
+NGSA,Hf,Hf ICP-MS mg/kg 0.04,ICP-MS,mg/kg,1.0,mg/kg,0.04,1,0,0.0
+NGSA,Hg,Hg AR mg/kg 0.01,AR,mg/kg,1.0,mg/kg,0.01,1,473,35.97
+NGSA,In,In AR mg/kg 0.02,AR,mg/kg,1.0,mg/kg,0.02,1,844,64.183
+NGSA,K,K XRF mg/kg 42,XRF,mg/kg,1.0,mg/kg,42.0,1,2,0.152
+NGSA,La,La ICP-MS mg/kg 0.1,ICP-MS,mg/kg,1.0,mg/kg,0.1,1,0,0.0
+NGSA,Li,Li AR mg/kg 0.1,AR,mg/kg,1.0,mg/kg,0.1,1,10,0.76
+NGSA,Mg,Mg XRF mg/kg 60,XRF,mg/kg,1.0,mg/kg,60.0,1,40,3.042
+NGSA,Mn,Mn XRF mg/kg 39,XRF,mg/kg,1.0,mg/kg,39.0,1,68,5.171
+NGSA,Mo,Mo ICP-MS mg/kg 0.3,ICP-MS,mg/kg,1.0,mg/kg,0.3,1,227,17.262
+NGSA,Na,Na XRF mg/kg 74,XRF,mg/kg,1.0,mg/kg,74.0,1,36,2.738
+NGSA,Nb,Nb ICP-MS mg/kg 0.03,ICP-MS,mg/kg,1.0,mg/kg,0.03,1,2,0.152
+NGSA,Ni,Ni ICP-MS mg/kg 0.5,ICP-MS,mg/kg,1.0,mg/kg,0.5,1,4,0.304
+NGSA,P,P XRF mg/kg 22,XRF,mg/kg,1.0,mg/kg,22.0,1,0,0.0
+NGSA,Pb,Pb ICP-MS mg/kg 0.1,ICP-MS,mg/kg,1.0,mg/kg,0.1,1,0,0.0
+NGSA,Pd,Pd FA mg/kg 0.001,FA,mg/kg,1.0,mg/kg,0.001,1,900,68.441
+NGSA,Pt,Pt FA mg/kg 0.0005,FA,mg/kg,1.0,mg/kg,0.0005,1,888,67.529
+NGSA,Rb,Rb ICP-MS mg/kg 0.2,ICP-MS,mg/kg,1.0,mg/kg,0.2,1,3,0.228
+NGSA,S,S XRF mg/kg 10,XRF,mg/kg,1.0,mg/kg,10.0,1,0,0.0
+NGSA,Sb,Sb ICP-MS mg/kg 0.4,ICP-MS,mg/kg,1.0,mg/kg,0.4,1,923,70.19
+NGSA,Sc,Sc ICP-MS mg/kg 0.3,ICP-MS,mg/kg,1.0,mg/kg,0.3,1,5,0.38
+NGSA,Se,Se AR mg/kg 0.01,AR,mg/kg,1.0,mg/kg,0.01,1,43,3.27
+NGSA,Sn,Sn ICP-MS mg/kg 0.2,ICP-MS,mg/kg,1.0,mg/kg,0.2,1,53,4.03
+NGSA,Sr,Sr ICP-MS mg/kg 0.2,ICP-MS,mg/kg,1.0,mg/kg,0.2,1,0,0.0
+NGSA,Ta,Ta ICP-MS mg/kg 0.02,ICP-MS,mg/kg,1.0,mg/kg,0.02,1,15,1.141
+NGSA,Te,Te AR mg/kg 0.02,AR,mg/kg,1.0,mg/kg,0.02,1,524,39.848
+NGSA,Th,Th ICP-MS mg/kg 0.02,ICP-MS,mg/kg,1.0,mg/kg,0.02,1,0,0.0
+NGSA,Ti,Ti XRF mg/kg 30,XRF,mg/kg,1.0,mg/kg,30.0,1,0,0.0
+NGSA,Tl,Tl AR mg/kg 0.02,AR,mg/kg,1.0,mg/kg,0.02,1,105,7.985
+NGSA,U,U ICP-MS mg/kg 0.02,ICP-MS,mg/kg,1.0,mg/kg,0.02,1,0,0.0
+NGSA,V,V ICP-MS mg/kg 0.1,ICP-MS,mg/kg,1.0,mg/kg,0.1,1,1,0.076
+NGSA,W,W ICP-MS mg/kg 0.1,ICP-MS,mg/kg,1.0,mg/kg,0.1,1,62,4.715
+NGSA,Y,Y ICP-MS mg/kg 0.05,ICP-MS,mg/kg,1.0,mg/kg,0.05,1,0,0.0
+NGSA,Zn,Zn ICP-MS mg/kg 0.9,ICP-MS,mg/kg,1.0,mg/kg,0.9,1,27,2.053
+NGSA,Zr,Zr ICP-MS mg/kg 0.2,ICP-MS,mg/kg,1.0,mg/kg,0.2,1,0,0.0
+GEMAS,Ag,AG,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,Al,AL,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,As,AS_,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,Au,AU,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,0.0002,1,325,15.381
+GEMAS,B,B,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,0.5,1,157,7.43
+GEMAS,Ba,BA,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,Be,BE,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,0.05,1,38,1.798
+GEMAS,Bi,BI,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,Ca,CA,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,Cd,CD,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,Ce,CE,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,Co,CO,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,Cr,CR,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,Cs,CS,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,Cu,CU,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,Fe,FE,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,Ga,GA,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,Ge,GE,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,0.02,1,540,25.556
+GEMAS,Hf,HF,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,0.01,1,329,15.57
+GEMAS,Hg,HG,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,In,IN_,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,0.003,1,80,3.786
+GEMAS,K,K,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,La,LA,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,Li,LI,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,Mg,MG,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,Mn,MN,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,Mo,MO,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,Na,NA,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,Nb,NB,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,Ni,NI,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,P,P,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,Pb,PB,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,Pd,PD,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,0.001,1,1252,59.252
+GEMAS,Pt,PT,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,0.001,1,1465,69.333
+GEMAS,Rb,RB,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,Re,RE,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,0.0005,1,1619,76.621
+GEMAS,S,S,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,5.0,1,27,1.278
+GEMAS,Sb,SB,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,Sc,SC,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,Se,SE,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,0.05,1,47,2.224
+GEMAS,Sn,SN,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,Sr,SR,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,Ta,TA,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,0.005,1,1973,93.374
+GEMAS,Te,TE,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,0.02,1,1172,55.466
+GEMAS,Th,TH,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,Ti,TI,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,Tl,TL,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,U,U,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,V,V,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,W,W,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,0.01,1,35,1.656
+GEMAS,Y,Y,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,Zn,ZN,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,,0,0,0.0
+GEMAS,Zr,ZR,"aqua regia, ICP-MS","mg/kg (asserted from the GEMAS aqua regia release, not carried in the file)",1.0,mg/kg,0.1,1,51,2.414

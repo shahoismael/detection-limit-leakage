@@ -1,0 +1,13 @@
+k_features,survey,n,retained,retention_pct,feature_set
+5,GEMAS,2113,925,43.78,"Te, Ag, Cs, Se, Cd"
+5,NASGL,4857,3,0.06,"Te, Ag, Cs, Se, Cd"
+5,NGSA,1315,4,0.3,"Te, Ag, Cs, Se, Cd"
+7,GEMAS,2113,908,42.97,"Te, Ag, Cs, Se, Cd, In, Sb"
+7,NASGL,4857,3,0.06,"Te, Ag, Cs, Se, Cd, In, Sb"
+7,NGSA,1315,2,0.15,"Te, Ag, Cs, Se, Cd, In, Sb"
+9,GEMAS,2113,905,42.83,"Te, Ag, Cs, Se, Cd, In, Sb, Hg, Be"
+9,NASGL,4857,3,0.06,"Te, Ag, Cs, Se, Cd, In, Sb, Hg, Be"
+9,NGSA,1315,2,0.15,"Te, Ag, Cs, Se, Cd, In, Sb, Hg, Be"
+12,GEMAS,2113,883,41.79,"Te, Ag, Cs, Se, Cd, In, Sb, Hg, Be, S, Tl, Mo"
+12,NASGL,4857,3,0.06,"Te, Ag, Cs, Se, Cd, In, Sb, Hg, Be, S, Tl, Mo"
+12,NGSA,1315,2,0.15,"Te, Ag, Cs, Se, Cd, In, Sb, Hg, Be, S, Tl, Mo"

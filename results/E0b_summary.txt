@@ -1,0 +1,41 @@
+E0b dose-response simulation
+generated: 2026-09-07 19:46:47
+config: {"seed": 20260906, "n_surveys": 3, "n_per_survey": 1200, "n_elements": 20, "n_reps": 100, "disparity": [0.0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95], "base_censor": 0.05, "target_element": 0, "bootstrap_draws": 2000}
+
+All values below are MEDIANS over repetitions, with a bootstrap 95% interval on
+the median. R-squared is unbounded below, so means are reported in the CSV but
+are not used for any verdict.
+
+RQ1  IS CENSORING AN IDENTITY CHANNEL?
+  mask->survey AUC   0.499 [0.496, 0.501] at disparity 0.00
+                  -> 0.993 [0.992, 0.993] at disparity 0.95
+                     delta +0.493   Spearman rho +0.994 (p = 0, n = 2000)
+  control: within-survey R2 0.237 -> 0.224
+           (flat confirms the geochemistry is unchanged across the sweep)
+
+  VERDICT RQ1: PASS - the censoring mask alone identifies the survey, and the effect scales with detection-limit disparity.
+
+RQ2  DOES IT INFLATE A REPORTED CROSS-REGION SCORE?
+  pooled random CV   0.327 -> 0.323
+  leave-one-survey-out 0.312 -> -1.250
+  INFLATION          +0.005 [-0.004, +0.009] at disparity 0.00
+                  -> +1.543 [+0.885, +2.400] at disparity 0.95
+                     Spearman rho +0.713 (p = 7.88e-310, n = 2000)
+
+  VERDICT RQ2: PASS - a pooled random split reports a materially higher score than leave-one-survey-out on identical data, and the gap widens with disparity. That gap is the leakage.
+
+MASK AS AN EXPLICIT FEATURE (secondary)
+  gain under pooled random CV   +0.0023
+  gain under leave-one-survey-out +0.0586
+  A gain that appears under the pooled split and not under LOSO is the shortcut
+  being exploited. A gain near zero under both means the leak travels through
+  the substituted concentrations, not through the mask supplied as a feature.
+
+censoring rate     0.050 -> 0.359
+
+Pass rules
+  RQ1: AUC delta > 0.10 AND highest-disparity AUC > 0.70
+  RQ2: bootstrap lower bound on median inflation > 0 at the highest disparity
+
+Geochemistry was identical across surveys by construction. Any survey signal
+here can only come from the detection limits.

@@ -1,0 +1,13 @@
+element,lod_NASGL,lod_NGSA,lod_GEMAS,censored_pct_NASGL,censored_pct_NGSA,censored_pct_GEMAS,lowest_lod_survey,highest_lod_survey,lod_ratio,surveys_compared,divergent
+Cs,5.0,0.1,,81.161,0.684,0.0,NGSA,NASGL,50.0,2,True
+Ag,1.0,0.03,,98.806,99.163,0.0,NGSA,NASGL,33.333,2,True
+Be,0.1,1.1,0.05,1.832,43.118,1.798,GEMAS,NGSA,22.0,3,True
+Se,0.2,0.01,0.05,43.566,3.27,2.224,NGSA,NASGL,20.0,3,True
+S,100.0,10.0,5.0,12.003,0.0,1.278,GEMAS,NASGL,20.0,3,True
+W,0.1,0.1,0.01,1.256,4.715,1.656,GEMAS,NASGL,10.0,3,True
+V,1.0,0.1,,0.206,0.076,0.0,NGSA,NASGL,10.0,2,True
+Th,0.2,0.02,,0.124,0.0,0.0,NGSA,NASGL,10.0,2,True
+Li,1.0,0.1,,0.268,0.76,0.0,NGSA,NASGL,10.0,2,True
+Sb,0.05,0.4,,0.515,70.19,0.0,NASGL,NGSA,8.0,2,True
+Mn,5.0,39.0,,0.288,5.171,0.0,NASGL,NGSA,7.8,2,True
+Ca,100.0,14.0,,1.174,0.0,0.0,NGSA,NASGL,7.143,2,True

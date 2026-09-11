@@ -1,0 +1,140 @@
+09_report
+
+TABLE 1  surveys and censoring
+  survey  n_samples  n_elements  elements_with_censoring  censored_cells_pct lowest_rate_element  lowest_rate_pct highest_rate_element  highest_rate_pct                                                   flag_convention
+   GEMAS       2113          53                       15                8.13                   S             1.28                   Ta             93.37 no flag; substituted at LOD/2 before delivery, mask reconstructed
+   NASGL       4857          44                       39                9.26                  Nb             0.02                   Ag             98.81                    reported as "<value"; limit read from the flag
+    NGSA       1315          52                       36               13.57                  Fe             0.08                   Ag             99.16    reported as "<value"; limit also declared in the column header
+
+TABLE 2  widest cross-survey detection-limit ratios
+  element  lod_NASGL  lod_NGSA  lod_GEMAS  censored_pct_NASGL  censored_pct_NGSA  censored_pct_GEMAS lowest_lod_survey highest_lod_survey  lod_ratio  surveys_compared  divergent
+       Cs       5.00      0.10        NaN              81.161              0.684               0.000              NGSA              NASGL     50.000                 2       True
+       Ag       1.00      0.03        NaN              98.806             99.163               0.000              NGSA              NASGL     33.333                 2       True
+       Be       0.10      1.10       0.05               1.832             43.118               1.798             GEMAS               NGSA     22.000                 3       True
+       Se       0.20      0.01       0.05              43.566              3.270               2.224              NGSA              NASGL     20.000                 3       True
+        S     100.00     10.00       5.00              12.003              0.000               1.278             GEMAS              NASGL     20.000                 3       True
+        W       0.10      0.10       0.01               1.256              4.715               1.656             GEMAS              NASGL     10.000                 3       True
+        V       1.00      0.10        NaN               0.206              0.076               0.000              NGSA              NASGL     10.000                 2       True
+       Th       0.20      0.02        NaN               0.124              0.000               0.000              NGSA              NASGL     10.000                 2       True
+       Li       1.00      0.10        NaN               0.268              0.760               0.000              NGSA              NASGL     10.000                 2       True
+       Sb       0.05      0.40        NaN               0.515             70.190               0.000             NASGL               NGSA      8.000                 2       True
+       Mn       5.00     39.00        NaN               0.288              5.171               0.000             NASGL               NGSA      7.800                 2       True
+       Ca     100.00     14.00        NaN               1.174              0.000               0.000              NGSA              NASGL      7.143                 2       True
+
+TABLE 3  censoring as an identity channel
+               experiment                                            arm                    model  n_features  balanced_accuracy  balanced_accuracy_sd  macro_f1  kappa  no_information_rate  retention_disparity
+            E1b_full_mask                                        finding        gradient_boosting          44             0.9782                0.0088    0.9773 0.9672               0.5862                  NaN
+         E1a_mask_density                                        finding        gradient_boosting           1             0.6408                0.0040    0.6006 0.6293               0.5862                  NaN
+          E1d_survival_k5 ceiling (feature set chosen by unavailability)                 logistic           1             0.4790                0.0074    0.4674 0.3293               0.5862                  NaN
+          E1d_survival_k7 ceiling (feature set chosen by unavailability)                 logistic           1             0.4764                0.0078    0.4645 0.3236               0.5862                  NaN
+          E1d_survival_k9 ceiling (feature set chosen by unavailability)                 logistic           1             0.4759                0.0079    0.4640 0.3226               0.5862                  NaN
+         E1d_survival_k12 ceiling (feature set chosen by unavailability)                 logistic           1             0.4724                0.0076    0.4601 0.3154               0.5862                  NaN
+     NULL_permuted_labels                                        finding                 logistic          44             0.3339                0.0011    0.2491 0.0016               0.5862                  NaN
+   E1d_survival_random_k5 finding (random feature sets, 200 draws per k) survive_flag_closed_form           1             0.3694                   NaN       NaN    NaN                  NaN               2.7026
+   E1d_survival_random_k7 finding (random feature sets, 200 draws per k) survive_flag_closed_form           1             0.4655                   NaN       NaN    NaN                  NaN               3.4707
+   E1d_survival_random_k9 finding (random feature sets, 200 draws per k) survive_flag_closed_form           1             0.4669                   NaN       NaN    NaN                  NaN               5.5632
+  E1d_survival_random_k12 finding (random feature sets, 200 draws per k) survive_flag_closed_form           1             0.4730                   NaN       NaN    NaN                  NaN              14.2103
+
+TABLE 4  R2 by arm and protocol, median over elements, 95% interval
+        regime representation             model                  random                 blocked                    loso
+  common_floor            ilr             ridge +0.806 [+0.683, +0.875] +0.793 [+0.668, +0.851] +0.535 [+0.225, +0.635]
+  common_floor            ilr           xgb_aft +0.831 [+0.714, +0.906] +0.789 [+0.680, +0.885] +0.413 [-0.067, +0.526]
+  common_floor            ilr    xgb_regression +0.859 [+0.743, +0.909] +0.833 [+0.691, +0.888] +0.424 [+0.200, +0.580]
+  common_floor           none  coordinates_only +0.470 [+0.381, +0.516] +0.220 [+0.125, +0.305] -1.425 [-2.472, -1.036]
+  common_floor           none mask_density_only +0.016 [-0.002, +0.058] -0.016 [-0.082, +0.012] -0.832 [-1.466, -0.527]
+  common_floor           none       survey_mean +0.085 [+0.016, +0.161] +0.091 [-0.014, +0.154] -0.728 [-1.225, -0.366]
+  mask_feature            ilr             ridge +0.795 [+0.682, +0.867] +0.768 [+0.660, +0.856] -0.046 [-0.403, +0.085]
+  mask_feature            ilr    xgb_regression +0.859 [+0.750, +0.908] +0.838 [+0.699, +0.884] +0.157 [-0.173, +0.420]
+  mask_feature           none  coordinates_only +0.470 [+0.379, +0.509] +0.219 [+0.145, +0.278] -1.534 [-2.305, -1.108]
+  mask_feature           none mask_density_only +0.016 [-0.001, +0.058] -0.016 [-0.082, +0.012] -0.835 [-1.466, -0.508]
+  mask_feature           none       survey_mean +0.081 [+0.013, +0.147] +0.088 [-0.015, +0.154] -0.726 [-1.233, -0.366]
+  substitution            clr             ridge +0.778 [+0.657, +0.846] +0.753 [+0.635, +0.828] +0.397 [+0.159, +0.499]
+  substitution            clr    xgb_regression +0.867 [+0.756, +0.913] +0.844 [+0.713, +0.894] +0.200 [-0.283, +0.342]
+  substitution            ilr             ridge +0.778 [+0.657, +0.847] +0.753 [+0.635, +0.828] +0.397 [+0.157, +0.502]
+  substitution            ilr    xgb_regression +0.858 [+0.746, +0.906] +0.837 [+0.697, +0.881] +0.181 [-0.243, +0.419]
+  substitution           none  coordinates_only +0.470 [+0.379, +0.512] +0.219 [+0.129, +0.283] -1.534 [-2.280, -1.101]
+  substitution           none mask_density_only +0.016 [-0.002, +0.058] -0.016 [-0.078, +0.012] -0.835 [-1.466, -0.498]
+  substitution           none       survey_mean +0.081 [+0.015, +0.147] +0.088 [-0.015, +0.144] -0.726 [-1.229, -0.347]
+  substitution            raw             ridge +0.561 [+0.418, +0.640] +0.523 [+0.387, +0.606] -0.083 [-0.354, +0.117]
+  substitution            raw    xgb_regression +0.876 [+0.770, +0.926] +0.848 [+0.738, +0.910] +0.460 [+0.164, +0.630]
+
+TABLE 5  inflation, and what spatial blocking recovers of it
+        regime representation             model  n_elements               inflation       blocking_recovers  pct_of_inflation_recovered
+  common_floor            ilr             ridge          44 +0.267 [+0.128, +0.334] +0.011 [+0.007, +0.014]                         4.2
+  common_floor            ilr    xgb_regression          44 +0.374 [+0.293, +0.572] +0.028 [+0.018, +0.037]                         7.4
+  common_floor            ilr           xgb_aft          44 +0.408 [+0.333, +0.731] +0.032 [+0.020, +0.046]                         7.9
+  common_floor           none       survey_mean          44 +0.740 [+0.385, +1.452] +0.007 [-0.006, +0.017]                         1.0
+  common_floor           none mask_density_only          44 +0.806 [+0.441, +1.228] +0.023 [+0.013, +0.037]                         2.8
+  common_floor           none  coordinates_only          44 +1.660 [+1.434, +2.793] +0.232 [+0.197, +0.247]                        14.0
+  mask_feature            ilr    xgb_regression          44 +0.630 [+0.456, +0.885] +0.031 [+0.019, +0.043]                         4.9
+  mask_feature           none       survey_mean          44 +0.850 [+0.385, +1.518] +0.006 [-0.004, +0.020]                         0.7
+  mask_feature            ilr             ridge          44 +0.867 [+0.669, +1.089] +0.017 [+0.011, +0.029]                         2.0
+  mask_feature           none mask_density_only          44 +0.874 [+0.475, +1.228] +0.026 [+0.015, +0.042]                         2.9
+  mask_feature           none  coordinates_only          44 +1.772 [+1.575, +2.901] +0.234 [+0.201, +0.265]                        13.2
+  substitution            raw    xgb_regression          44 +0.366 [+0.249, +0.635] +0.022 [+0.017, +0.033]                         6.1
+  substitution            ilr             ridge          44 +0.412 [+0.313, +0.503] +0.015 [+0.010, +0.026]                         3.8
+  substitution            clr             ridge          44 +0.412 [+0.324, +0.503] +0.015 [+0.010, +0.026]                         3.8
+  substitution            ilr    xgb_regression          44 +0.589 [+0.414, +0.771] +0.027 [+0.021, +0.044]                         4.5
+  substitution            clr    xgb_regression          44 +0.630 [+0.534, +0.838] +0.025 [+0.019, +0.036]                         4.0
+  substitution            raw             ridge          44 +0.653 [+0.431, +0.895] +0.028 [+0.018, +0.042]                         4.2
+  substitution           none       survey_mean          44 +0.850 [+0.385, +1.500] +0.006 [-0.005, +0.020]                         0.7
+  substitution           none mask_density_only          44 +0.874 [+0.482, +1.214] +0.026 [+0.015, +0.042]                         2.9
+  substitution           none  coordinates_only          44 +1.772 [+1.575, +2.794] +0.234 [+0.201, +0.268]                        13.2
+
+TABLE 6  cost of the common floor, per survey
+  survey  censored_pct_before  censored_pct_after  values_newly_censored
+   NASGL                9.347              10.916                   3322
+    NGSA               11.040              18.305                   4194
+   GEMAS                1.508              18.907                  16138
+
+  values_newly_censored is real information discarded by the correction:
+  concentrations a survey resolved and reported, deleted because another
+  survey could not resolve them. Harmonisation can only go upwards, so the
+  survey that measured best pays the most, and the number is reported with
+  the correction rather than after it.
+
+  supporting: per-element floors where at least two surveys disclose a limit
+  element  lod_NASGL  lod_NGSA  lod_GEMAS  common_floor  n_surveys_with_limit
+       Fe      100.0     100.0        NaN         100.0                     2
+       Mg      100.0      60.0        NaN         100.0                     2
+       Na      100.0      74.0        NaN         100.0                     2
+        K      100.0      42.0        NaN         100.0                     2
+        S      100.0      10.0       5.00         100.0                     3
+       Ca      100.0      14.0        NaN         100.0                     2
+        P       50.0      22.0        NaN          50.0                     2
+       Mn        5.0      39.0        NaN          39.0                     2
+       Cs        5.0       0.1        NaN           5.0                     2
+       Be        0.1       1.1       0.05           1.1                     3
+
+FIGURE 2 DATA  inflation against detection-limit ratio
+  195 points across 3 regimes; 39 on the primary arm
+  detection-limit ratio spans 1.00 to 50.00
+
+  This figure is the one a reader can refute the paper with. If the cloud
+  is flat, the mechanism does not operate on these surveys, whatever the
+  simulation and the mask experiments showed. It is therefore plotted as
+  raw points with the fit drawn over them, never as binned means, which
+  would hide the spread that makes the claim checkable.
+
+PAIRED COMPARISONS SURVIVING CORRECTION
+  8 of 10 arm comparisons have a Benjamini-Hochberg corrected p below 0.05
+  protocol          model            arm_a            arm_b  n_elements  median_difference  ci_low  ci_high  wilcoxon_statistic  p_value  p_value_bh
+      loso xgb_regression common_floor/ilr substitution/clr          44             0.2800  0.1980   0.3757                23.0   0.0000      0.0000
+      loso xgb_regression substitution/clr substitution/ilr          44            -0.1110 -0.1822  -0.0409               172.0   0.0001      0.0004
+      loso xgb_regression substitution/clr substitution/raw          44            -0.2347 -0.3841  -0.1679               184.0   0.0002      0.0005
+      loso xgb_regression common_floor/ilr substitution/ilr          44             0.1520  0.0939   0.3212               198.0   0.0003      0.0008
+      loso xgb_regression mask_feature/ilr substitution/raw          44            -0.1959 -0.3155  -0.0840               258.0   0.0050      0.0093
+      loso xgb_regression substitution/ilr substitution/raw          44            -0.1724 -0.2713  -0.0707               263.0   0.0061      0.0093
+      loso xgb_regression common_floor/ilr mask_feature/ilr          44             0.1612  0.0628   0.2487               265.0   0.0065      0.0093
+      loso xgb_regression mask_feature/ilr substitution/clr          44             0.0928  0.0440   0.1864               285.0   0.0135      0.0168
+
+TRACEABILITY
+  Every number above was read from a file written by a numbered script.
+  Nothing is computed here. A value that appears in the Results section
+  and not in 05-results/ is a value nobody can reproduce.
+
+  all upstream reports present
+
+written to 05-results/tables/: table_1_surveys.csv, table_2_detection_limit_ratios.csv, table_3_identity_channel.csv, table_4_performance_by_protocol.csv, table_5_inflation_and_blocking.csv, table_6_correction_cost.csv, table_6_supporting_common_floors.csv
+written to 05-results/figure_data/: figure_2_inflation_vs_lod_ratio.csv, figure_3_protocol_comparison.csv
+written to 05-results/: 09_report.txt

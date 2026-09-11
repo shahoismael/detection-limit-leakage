@@ -1,0 +1,12 @@
+E0b dose-response simulation
+config: {"seed": 20260906, "n_surveys": 3, "n_per_survey": 1200, "n_elements": 20, "n_reps": 100, "disparity": [0.0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95], "base_censor": 0.05, "target_element": 0}
+
+mask->survey AUC   0.499 (disparity 0.00) -> 0.992 (disparity 0.95)
+                   delta +0.494   monotonic: True
+mask gain on LOSO  +0.0000 -> +0.4241   delta +0.4241
+censoring rate     0.050 -> 0.359
+
+VERDICT: PASS - censoring disparity alone identifies the survey and adds predictive signal. Mechanism is causal.
+
+Geochemistry was identical across surveys by construction. Any survey signal
+here can only come from the detection limits.
